@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HUNK | Empowering Voices & Talent</title>
+    <style>
+        /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        /* Header & Navigation */
+        header {
+            background: #111;
+            color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff3e3e;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ff3e3e;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+        .btn {
+            background: #ff3e3e;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #e03232;
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 5%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: #ff3e3e;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Stories / Grid Section */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* Story Form Section */
+        .form-section {
+            background: #f0f0f0;
+        }
+        .story-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .social-links {
+            margin-bottom: 15px;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .social-links a:hover {
+            color: #ff3e3e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="logo">The HUNK</div>
+        <nav>
+            <a href="#about">हाम्रोबारे</a>
+            <a href="#stories">आवाज र प्रतिभा</a>
+            <a href="#submit">आफ्नो कथा पठाउनुहोस्</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <h1>आवाज नपाएकाहरूको आवाज: The HUNK</h1>
+        <p>हामी प्रत्येक व्यक्तिको ज्ञान, क्षमता र प्रेरणादायी कथालाई संसारसामु पुर्‍याउने प्रयास गर्छौँ।</p>
+        <a href="#submit" class="btn">आफ्नो क्षमता/कथा सेयर गर्नुहोस्</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">हाम्रो उद्देश्य</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #555;">
+            "The HUNK" एउटा यस्तो मञ्च हो जहाँ समाजका लुकेका प्रतिभा, प्रेरणादायी व्यक्तिहरू र उनीहरूको ज्ञानलाई स्थान दिइन्छ। यदि तपाईंसँग कुनै विशेष क्षमता, अनुभव वा समाजलाई उपयोगी हुने ज्ञान छ भने हामी तपाईंको आवाज बन्न तयार छौँ।
+        </p>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section id="stories" style="background: #fff;">
+        <h2 class="section-title">प्रेरणादायी आवाजहरू</h2>
+        <div class="grid-container">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Story 1">
+                <div class="card-content">
+                    <h3>सफलताको एउटा फरक कथा</h3>
+                    <p>कसरी शून्यबाट सुरु गरेर आफ्नो क्षमताको बलमा नयाँ पहिचान बनाउन सफल भइयो, उहाँको आफ्नै आवाजमा।</p>
+                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">पूरा हेर्नुहोस्</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Story 2">
+                <div class="card-content">
+                    <h3>ज्ञान र सिपको हस्तान्तरण</h3>
+                    <p>आफ्नो क्षेत्रमा वर्षौँको अनुभव हासिल गर्नुभएका व्यक्तिहरूले दिएका उपयोगी सुझाव र ज्ञान।</p>
+                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">पूरा हेर्नुहोस्</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Story 3">
+                <div class="card-content">
+                    <h3>युवा प्रतिभा र सम्भावना</h3>
+                    <p>भविष्यका कर्णाधार मानिने युवाहरूको नयाँ सोच, सिर्जना र क्षमतालाई प्रस्तुत गरिएको कुराकानी।</p>
+                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">पूरा हेर्नुहोस्</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Submit Story Form Section -->
+    <section id="submit" class="form-section">
+        <h2 class="section-title">तपाईंको कथा वा क्षमता सेयर गर्नुहोस्</h2>
+        <form class="story-form">
+            <div class="form-group">
+                <label for="name">तपाईंको पूरा नाम</label>
+                <input type="text" id="name" placeholder="तपाईंको नाम लेख्नुहोस्" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">सम्पर्क नम्बर / WhatsApp</label>
+                <input type="tel" id="phone" placeholder="फोन नम्बर" required>
+            </div>
+            <div class="form-group">
+                <label for="story">तपाईंको कथा वा क्षमताको बारेमा छोटो विवरण</label>
+                <textarea id="story" placeholder="तपाईं के सम्बन्धी ज्ञान वा कथा अरूमाझ ल्याउन चाहनुहुन्छ?" required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">पठाउनुहोस्</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook Page</a> | 
+            <a href="#">YouTube</a> | 
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2026 The HUNK. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
