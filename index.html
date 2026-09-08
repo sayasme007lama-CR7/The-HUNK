@@ -1,246 +1,213 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The HUNK - प्रेरणादायी कथाहरू र प्रतिभा</title>
-    
-    <!-- Google Search Console Verification Tag -->
-    <meta name="google-site-verification" content="MymLlNQ7yejGBBUlAs5j0JKN86HsTGYj7HpIhjBuJis" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE HUNK — Empowering Silent Voices</title>
+<meta name="description" content="THE HUNK — Stories, voices, courage and inspiration.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
 
-    <!-- SEO and Google Search Tags -->
-    <meta name="description" content="The HUNK - प्रेरणादायी कथाहरू, लुकेका प्रतिभा र युवाहरूको सफलताको यात्रा प्रस्तुत गर्ने आधिकारिक प्लेटफर्म।">
-    <meta name="keywords" content="The HUNK, The HUNK Official, Nepali Stories, Inspiration, Youth Talent Nepal">
-    <meta name="author" content="The HUNK">
+:root{
+  --bg:#070707; --card:#101010; --text:#f4f1e8; --muted:#a7a39a;
+  --gold:#d6ad55; --line:#262626; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(92%,var(--max));margin:auto}
 
-    <!-- Social Media Preview Tags -->
-    <meta property="og:title" content="The HUNK - प्रेरणादायी कथाहरू र प्रतिभा">
-    <meta property="og:description" content="तपाईंको प्रतिभा र जीवनका प्रेरक अनुभवहरू संसारसामु प्रस्तुत गर्ने माध्यम।">
-    <meta property="og:url" content="https://sayasme007lama-CR7.github.io/The-HUNK/">
-    <meta property="og:type" content="website">
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;background:linear-gradient(#070707ee,transparent);transition:.3s}
+nav.scrolled{background:#070707f2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px}
+.brand-mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:13px}
+.links{display:flex;gap:28px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.links a{opacity:.8;transition:.2s}.links a:hover{color:var(--gold);opacity:1}
+.menu{display:none;background:none;border:1px solid #333;color:white;border-radius:8px;padding:8px 11px}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background: #e63946;
-            color: #fff;
-            padding: 10px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .btn:hover {
-            background: #m11d27;
-        }
-        .section {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            color: #1a1a1a;
-        }
-        .cards-container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            width: 300px;
-        }
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card-content h3 {
-            margin-bottom: 10px;
-        }
-        .form-section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 40px auto;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-        footer {
-            background: #1a1a1a;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        .social-links {
-            margin-bottom: 10px;
-        }
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-    </style>
+/* HERO */
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 75% 35%,#8c6b2925,transparent 28%),
+ linear-gradient(115deg,#050505 20%,#1110 60%);}
+.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid #d6ad5520;border-radius:50%;right:-170px;top:18%;box-shadow:0 0 0 60px #d6ad5508,0 0 0 120px #d6ad5504}
+.hero-content{position:relative;z-index:2;padding-top:90px}
+.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(58px,11vw,145px);line-height:.86;letter-spacing:-7px;font-weight:900;max-width:850px}
+h1 span{color:var(--gold)}
+.hero-copy{max-width:610px;margin:30px 0;color:#c3c0b7;font-size:18px}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid #444;border-radius:5px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.btn.primary{background:var(--gold);color:#090909;border-color:var(--gold)}
+.btn:hover{transform:translateY(-2px);transition:.2s}
+.scroll{position:absolute;bottom:28px;left:4%;font-size:10px;letter-spacing:3px;color:#777;writing-mode:vertical-rl}
+
+/* SECTIONS */
+section{padding:105px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;font-weight:800;text-transform:uppercase}
+h2{font-family:"Playfair Display",serif;font-size:clamp(38px,6vw,72px);line-height:1.05}
+.lead{max-width:470px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--line);padding:26px;min-height:250px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:auto -30px -70px auto;width:180px;height:180px;border:1px solid #d6ad5518;border-radius:50%}
+.number{font-size:12px;color:var(--gold);font-weight:800}
+.card h3{font-family:"Playfair Display",serif;font-size:28px;margin:55px 0 8px}
+.card p{color:var(--muted);font-size:14px}
+
+/* FEATURE */
+.feature{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.feature-main{min-height:450px;background:linear-gradient(145deg,#171717,#0b0b0b);border:1px solid var(--line);padding:42px;display:flex;flex-direction:column;justify-content:end}
+.feature-main h3{font-size:clamp(35px,5vw,65px);line-height:1;margin:12px 0}
+.feature-side{display:grid;gap:18px}
+.mini{background:#101010;border:1px solid var(--line);padding:28px}
+.mini h4{font-size:22px;margin:12px 0 5px}
+.mini p{color:var(--muted);font-size:13px}
+
+/* QUOTE */
+.quote{padding:90px 0;text-align:center;background:#0a0a0a}
+.quote blockquote{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,58px);max-width:900px;margin:auto;line-height:1.15}
+.quote cite{display:block;color:var(--gold);font-size:11px;letter-spacing:3px;margin-top:25px;font-style:normal}
+
+/* ABOUT / CONTACT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.about p{color:#b8b5ad;margin-top:20px;font-size:17px}
+.manifesto{border-left:2px solid var(--gold);padding-left:25px}
+.contact-box{border:1px solid var(--line);padding:35px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+
+/* FOOTER */
+footer{padding:45px 0;color:#777;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:25px}
+.socials{display:flex;gap:18px}.socials a:hover{color:var(--gold)}
+
+@media(max-width:800px){
+ .links{display:none;position:absolute;top:72px;left:4%;right:4%;padding:20px;background:#0b0b0bf7;border:1px solid var(--line);flex-direction:column;gap:18px}
+ .links.open{display:flex}.menu{display:block}
+ h1{letter-spacing:-4px}
+ .grid,.feature,.about{grid-template-columns:1fr}
+ .section-head{display:block}.lead{margin-top:18px}
+ .feature-main{min-height:380px}.about{gap:40px}
+ .contact-box{display:block}.contact-box .btn{margin-top:20px}
+ .footer-inner{display:block}.socials{margin-top:15px}
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>The HUNK</h1>
-        <nav>
-            <a href="#about">हाम्रो बारेमा</a>
-            <a href="#stories">कथाहरू</a>
-            <a href="#submit">कथा पठाउनुहोस्</a>
-        </nav>
-    </header>
+<nav id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home"><span class="brand-mark">TH</span><span>THE HUNK</span></a>
+    <div class="links" id="links">
+      <a href="#home">Home</a><a href="#stories">Stories</a><a href="#about">About</a>
+      <a href="#mission">Mission</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" id="menu">☰</button>
+  </div>
+</nav>
 
-    <section class="hero">
-        <h2>प्रेरणादायी कथाहरू र प्रतिभा</h2>
-        <p>तपाईंको प्रतिभा र जीवनका प्रेरक अनुभवहरू संसारसामु प्रस्तुत गर्ने माध्यम।</p>
-        <a href="#submit" class="btn">आफ्नो कथा सेयर गर्नुहोस्</a>
-    </section>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="kicker">A story can change a life.</div>
+    <h1>THE <span>HUNK</span></h1>
+    <p class="hero-copy">Stories that deserve to be heard. Voices that deserve to rise. A cinematic home for courage, truth, talent and the people behind the stories.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#stories">Explore Stories</a>
+      <a class="btn" href="#about">Our Mission →</a>
+    </div>
+  </div>
+  <div class="scroll">SCROLL TO DISCOVER</div>
+</section>
 
-    <section id="about" class="section">
-        <h2 class="section-title">हाम्रो उद्देश्य</h2>
-        <p style="text-align: center; max-width: 800px; margin: auto;">The HUNK एउटा यस्तो प्लेटफर्म हो जहाँ समाजमा रहेका फरक क्षमता, प्रेरणादायी कथा, र लुकेका प्रतिभाहरूलाई उजागर गरिन्छ। हामी प्रत्येक व्यक्तिको संघर्ष र सफलताको कदर गर्छौँ।</p>
-    </section>
+<section id="stories">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">01 — Stories</div><h2>Real people.<br>Real stories.</h2></div>
+      <p class="lead">From unheard voices to extraordinary journeys, THE HUNK brings human stories into the light.</p>
+    </div>
+    <div class="feature">
+      <article class="feature-main">
+        <div class="eyebrow">Featured Story</div>
+        <h3>The courage to begin again.</h3>
+        <p class="lead">A cinematic space for your first flagship story, documentary or interview.</p>
+        <div class="cta-row" style="margin-top:22px"><a class="btn primary" href="#contact">Watch / Read</a></div>
+      </article>
+      <div class="feature-side">
+        <article class="mini"><span class="number">01</span><h4>Voices</h4><p>Stories from people whose voices are often overlooked.</p></article>
+        <article class="mini"><span class="number">02</span><h4>Journeys</h4><p>Failures, turning points, dreams and the road forward.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="stories" class="section">
-        <h2 class="section-title">विशेष कथाहरू</h2>
-        <div class="cards-container">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Story 1">
-                <div class="card-content">
-                    <h3>संघर्ष र सफलता</h3>
-                    <p>कठिन परिस्थितिबाट अघि बढेका व्यक्तिहरूको प्रेरणादायी जीवन यात्रा।</p>
-                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">अझै पढ्नुहोस्</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Story 2">
-                <div class="card-content">
-                    <h3>ज्ञान र सिपको हस्तान्तरण</h3>
-                    <p>आफ्नो क्षेत्रमा वर्षौँको अनुभव हासिल गरेका व्यक्तिहरूले दिएका उपयोगी सुझावहरू।</p>
-                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">अझै पढ्नुहोस्</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" alt="Story 3">
-                <div class="card-content">
-                    <h3>युवा प्रतिभा र सम्भावना</h3>
-                    <p>भविष्यका कर्णधार मानिने युवाहरूको नयाँ सोच र क्षमताको प्रस्तुति।</p>
-                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">अझै पढ्नुहोस्</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="quote">
+  <div class="container">
+    <blockquote>“Every voice matters. Some just need someone brave enough to listen.”</blockquote>
+    <cite>— THE HUNK</cite>
+  </div>
+</div>
 
-    <section id="submit" class="form-section">
-        <h2 class="section-title">तपाईंको कथा वा क्षमता सेयर गर्नुहोस्</h2>
-        <form action="https://formspree.io/f/xdeowjen" method="POST" class="story-form">
-            <div class="form-group">
-                <label for="name">तपाईंको पूरा नाम</label>
-                <input type="text" id="name" name="name" placeholder="तपाईंको नाम लेख्नुहोस्" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">सम्पर्क नम्बर / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="फोन नम्बर लेख्नुहोस्" required>
-            </div>
-            <div class="form-group">
-                <label for="story">तपाईंको कथा वा क्षमताको बारेमा छोटकरीमा</label>
-                <textarea id="story" name="story" placeholder="तपाईं के सम्बन्धी कथा वा प्रतिभा सेयर गर्न चाहनुहुन्छ?" required></textarea>
-            </div>
-            <button type="submit" class="btn" style="width: 100%;">पठाउनुहोस्</button>
-        </form>
-    </section>
+<section id="mission">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">02 — What We Do</div><h2>Create.<br>Explore.<br>Inspire.</h2></div>
+      <p class="lead">Built as a media and storytelling platform — ready for films, interviews, photography, articles and original productions.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><span class="number">01</span><h3>Documentaries</h3><p>Human-centered cinematic films and powerful real-world narratives.</p></article>
+      <article class="card"><span class="number">02</span><h3>Interviews</h3><p>Conversations that go beyond the surface and reveal the person behind the story.</p></article>
+      <article class="card"><span class="number">03</span><h3>Inspiration</h3><p>Ideas, journeys and lessons designed to move people forward.</p></article>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/share/19MwkeeJ47/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-            <a href="https://www.instagram.com/thehunkofficialmedia?stkn=eTd6cDlkNmp6eHRu" target="_blank" rel="noopener noreferrer">Instagram</a> |
-            <a href="https://www.tiktok.com/@thehunkofficial?_r=1&_t=ZS-99YPmxMOOSe" target="_blank" rel="noopener noreferrer">TikTok</a> |
-            <a href="https://youtube.com/@thehunkofficial?si=XKqK34N9Aq80qAUh" target="_blank" rel="noopener noreferrer">YouTube</a>
-        </div>
-        <p>&copy; 2026 The HUNK. All Rights Reserved.</p>
-    </footer>
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="eyebrow">03 — About THE HUNK</div>
+      <h2>A platform with a purpose.</h2>
+      <p>THE HUNK is more than a name. It is a storytelling identity built around people, courage, creativity and voices that deserve a larger stage.</p>
+      <p>V2 is designed with a premium cinematic feel while keeping the site fast, responsive and ready to grow into a full media platform.</p>
+    </div>
+    <div class="manifesto">
+      <div class="eyebrow">Our belief</div>
+      <h2 style="font-size:clamp(30px,4vw,52px);margin-top:15px">Empowering<br>Silent Voices.</h2>
+      <p>We don't simply tell stories. We create a place where people can be seen, heard and remembered.</p>
+    </div>
+  </div>
+</section>
 
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">04 — Contact</div><h2>Have a story?</h2></div>
+      <p class="lead">Collaborations, interviews, documentaries, creative projects and story submissions.</p>
+    </div>
+    <div class="contact-box">
+      <div><h3 style="font-size:28px">Let's make something meaningful.</h3><p style="color:var(--muted)">THE HUNK • Stories worth hearing.</p></div>
+      <a class="btn primary" href="mailto:hello@thehunk.com">Get In Touch →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 THE HUNK. All rights reserved.</div>
+    <div class="socials"><a href="#">YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav'), menu=document.getElementById('menu'), links=document.getElementById('links');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
 </body>
 </html>
