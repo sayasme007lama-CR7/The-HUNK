@@ -260,21 +260,21 @@
     <!-- Submit Story Form Section -->
     <section id="submit" class="form-section">
         <h2 class="section-title">तपाईंको कथा वा क्षमता सेयर गर्नुहोस्</h2>
-        <form class="story-form">
-            <div class="form-group">
-                <label for="name">तपाईंको पूरा नाम</label>
-                <input type="text" id="name" placeholder="तपाईंको नाम लेख्नुहोस्" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">सम्पर्क नम्बर / WhatsApp</label>
-                <input type="tel" id="phone" placeholder="फोन नम्बर" required>
-            </div>
-            <div class="form-group">
-                <label for="story">तपाईंको कथा वा क्षमताको बारेमा छोटो विवरण</label>
-                <textarea id="story" placeholder="तपाईं के सम्बन्धी ज्ञान वा कथा अरूमाझ ल्याउन चाहनुहुन्छ?" required></textarea>
-            </div>
-            <button type="submit" class="btn" style="width: 100%;">पठाउनुहोस्</button>
-        </form>
+        <form action="https://formspree.io/f/xdeowjen" method="POST" class="story-form">
+    <div class="form-group">
+        <label for="name">तपाईंको पूरा नाम</label>
+        <input type="text" id="name" name="name" placeholder="तपाईंको नाम लेख्नुहोस्" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">सम्पर्क नम्बर / WhatsApp</label>
+        <input type="tel" id="phone" name="phone" placeholder="फोन नम्बर लेख्नुहोस्" required>
+    </div>
+    <div class="form-group">
+        <label for="story">तपाईंको कथा वा क्षमताको बारेमा छोटकरीमा</label>
+        <textarea id="story" name="story" placeholder="तपाईं के सम्बन्धी कथा वा प्रतिभा सेयर गर्न चाहनुहुन्छ?" required></textarea>
+    </div>
+    <button type="submit" class="btn" style="width: 100%;">पठाउनुहोस्</button>
+</form>
     </section>
 
     <!-- Footer Section -->
