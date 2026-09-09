@@ -95,6 +95,36 @@ footer{padding:45px 0;color:#777;font-size:12px}
  .contact-box{display:block}.contact-box .btn{margin-top:20px}
  .footer-inner{display:block}.socials{margin-top:15px}
 }
+
+/* PREMIUM ABOUT PAGE */
+.about-page{padding:110px 0 80px;background:#f4f0e8;color:#171515}
+.about-page .container{max-width:1100px}
+.about-hero{padding:20px 0 85px;border-bottom:1px solid #cfc6b7}
+.about-page .eyebrow{color:#641f2b;letter-spacing:4px;font-weight:800;font-size:11px}
+.about-hero h2{font-family:"Playfair Display",serif;font-size:clamp(42px,7vw,82px);line-height:.98;margin:20px 0 28px;letter-spacing:-2px}
+.about-hero h2 span,.about-section h3,.about-promise h3{color:#641f2b}
+.about-intro{font-size:20px;line-height:1.65;max-width:760px;color:#514c46}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#cfc6b7;margin:65px 0;background-color:#cfc6b7}
+.about-section{background:#f4f0e8;padding:42px 38px;min-height:330px}
+.about-num{font-size:11px;font-weight:800;color:#9b7b37;letter-spacing:2px;margin-bottom:50px}
+.about-section h3{font-family:"Playfair Display",serif;font-size:30px;margin-bottom:18px;letter-spacing:.5px}
+.about-section p{color:#514c46;margin:0 0 14px;font-size:15px;line-height:1.8}
+.about-section strong{color:#641f2b}
+.about-topics{font-size:14px!important;font-weight:700;color:#641f2b!important}
+.vision-line{font-family:"Playfair Display",serif;font-size:21px!important;line-height:1.35!important;color:#641f2b!important}
+.pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.pillars span{border:1px solid #9b7b37;padding:7px 12px;font-size:10px;letter-spacing:1.5px;font-weight:800;color:#641f2b}
+.about-manifesto{background:#171515;color:#f4f0e8;padding:75px 55px;margin:65px 0;text-align:center}.about-manifesto .eyebrow{color:#d6ad55}.about-manifesto blockquote{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,55px);line-height:1.1;margin:25px auto;max-width:900px}.about-manifesto p{max-width:720px;margin:auto;color:#c7c1b7;line-height:1.8}
+.knowledge-universe{padding:25px 0 70px}.knowledge-universe h3{font-family:"Playfair Display",serif;color:#641f2b;font-size:clamp(32px,5vw,58px);margin:15px 0}.knowledge-universe>p{max-width:760px;color:#514c46;line-height:1.8}.learning-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:35px 0}.learning-cards div{border:1px solid #cfc6b7;padding:25px;background:#eee9df}.learning-cards b{display:block;color:#641f2b;font-family:"Playfair Display",serif;font-size:22px;margin-bottom:8px}.learning-cards span{font-size:12px;color:#69635b}.goal{margin-top:30px!important;color:#641f2b!important;font-family:"Playfair Display",serif;font-size:20px}.about-promise{border-top:1px solid #cfc6b7;border-bottom:1px solid #cfc6b7;padding:65px 0}.about-promise h3{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,50px);line-height:1.15;margin-top:20px}.about-welcome{text-align:center;padding:90px 0 30px}.about-welcome h3{font-family:"Playfair Display",serif;color:#641f2b;font-size:clamp(32px,5vw,62px);line-height:1.05;margin:20px 0}.about-welcome p{font-weight:900;letter-spacing:5px;margin-top:40px}.about-welcome span{font-size:11px;color:#9b7b37;letter-spacing:2px;font-weight:800}
+@media(max-width:800px){.about-grid{grid-template-columns:1fr}.about-section{padding:35px 25px;min-height:auto}.about-manifesto{padding:55px 25px}.learning-cards{grid-template-columns:1fr}.about-hero{padding-bottom:55px}}
+
+.about-photo{width:100%;height:250px;object-fit:cover;display:block;filter:saturate(.88) contrast(1.03)}
+.about-section{padding:0 0 34px;overflow:hidden}
+.about-section .about-copy{padding:30px 34px 0}
+.about-hero-photo{width:100%;height:min(58vw,520px);object-fit:cover;display:block;margin-top:38px;filter:brightness(.78) saturate(.85)}
+.about-hero-photo-wrap{position:relative;overflow:hidden;background:#171515}
+.about-hero-photo-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(23,21,21,.72) 100%)}
+.about-hero-photo-label{position:absolute;left:30px;bottom:25px;z-index:2;color:#f4f0e8;font-size:11px;letter-spacing:3px;font-weight:800}
+@media(max-width:800px){.about-photo{height:230px}.about-section .about-copy{padding:28px 25px 0}.about-hero-photo{height:300px}}
 </style>
 </head>
 <body>
@@ -166,19 +196,40 @@ footer{padding:45px 0;color:#777;font-size:12px}
   </div>
 </section>
 
-<section id="about">
-  <div class="container about">
-    <div>
-      <div class="eyebrow">03 — About THE HUNK</div>
-      <h2>A platform with a purpose.</h2>
-      <p>THE HUNK is more than a name. It is a storytelling identity built around people, courage, creativity and voices that deserve a larger stage.</p>
-      <p>V2 is designed with a premium cinematic feel while keeping the site fast, responsive and ready to grow into a full media platform.</p>
+<section id="about" class="about-page">
+  <div class="container">
+    <div class="about-hero">
+      <div class="eyebrow">03 — ABOUT THE HUNK</div>
+      <h2>MORE THAN A NAME.<br><span>A PLATFORM WITH A PURPOSE.</span></h2>
+      <p class="about-intro">THE HUNK is a platform created to discover, share, learn, and amplify meaningful stories, knowledge, ideas, and voices.</p>
+      <div class="about-hero-photo-wrap"><img class="about-hero-photo" src="https://images.unsplash.com/photo-1759659334772-c3a05b8178e9?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Documentary interview and storytelling" loading="eager"><div class="about-hero-photo-label">STORIES • PEOPLE • KNOWLEDGE • PURPOSE</div></div>
     </div>
-    <div class="manifesto">
-      <div class="eyebrow">Our belief</div>
-      <h2 style="font-size:clamp(30px,4vw,52px);margin-top:15px">Empowering<br>Silent Voices.</h2>
-      <p>We don't simply tell stories. We create a place where people can be seen, heard and remembered.</p>
+
+    <div class="about-grid">
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1759659334772-c3a05b8178e9?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="A documentary interview capturing a real human story" loading="lazy"><div class="about-copy"><div class="about-num">01</div><h3>WHY THE HUNK EXISTS</h3><p>The world is full of people with extraordinary stories, hidden talents, valuable experiences, and knowledge. But not every voice gets heard.</p><p>Some stories remain untold. Some people remain unseen. Some knowledge never reaches the people who need it.</p><p><strong>THE HUNK exists to help change that.</strong></p></div></article>
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1760720963053-aca574b081b8?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Knowledge, learning and reflection" loading="lazy"><div class="about-copy"><div class="about-num">02</div><h3>STORIES</h3><p>We explore stories of struggle, courage, achievement, failure, hope, and transformation.</p><p>We believe that a powerful story does not have to come from a famous person. Sometimes, the most meaningful stories belong to ordinary people who have experienced extraordinary things.</p><p><strong>One person's story can become another person's strength.</strong></p></div></article>
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1768885511762-4f8a888b0a6f?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Filmmaking and visual storytelling" loading="lazy"><div class="about-copy"><div class="about-num">03</div><h3>LEARN</h3><p>THE HUNK aims to become a place where people can explore and understand different subjects—from the simplest concepts to deeper knowledge.</p><p class="about-topics">Technology • Science • History • Psychology • Filmmaking • Photography • Languages • Creativity • Personal Development</p><p><strong>Learn something today that makes you better tomorrow.</strong></p></div></article>
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1546838768-4f581246d098?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Photography and creative expression" loading="lazy"><div class="about-copy"><div class="about-num">04</div><h3>CREATE</h3><p>THE HUNK explores filmmaking, photography, visual storytelling, interviews, documentaries, and other forms of creative expression.</p><p>Creativity is not only about making something beautiful. It is about giving an idea, a story, or a voice a way to reach people.</p></div></article>
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1739296385046-206bd6f31dc1?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="The craft behind the camera" loading="lazy"><div class="about-copy"><div class="about-num">05</div><h3>INSPIRE</h3><p>We want to share stories, ideas, and experiences that encourage people to believe in themselves and continue moving forward.</p><p>Not perfect lives. Not impossible dreams. But real people who faced real challenges—and continued to rise.</p></div></article>
+      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1768885511762-4f8a888b0a6f?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Creating stories that move people" loading="lazy"><div class="about-copy"><div class="about-num">06</div><h3>OUR VISION</h3><p class="vision-line">TO AMPLIFY UNHEARD VOICES, SHARE MEANINGFUL KNOWLEDGE, AND INSPIRE PEOPLE TO RISE.</p><div class="pillars"><span>DISCOVER</span><span>LEARN</span><span>CREATE</span><span>SHARE</span><span>INSPIRE</span></div></div></article>
     </div>
+
+    <div class="about-manifesto">
+      <div class="eyebrow">OUR PHILOSOPHY</div>
+      <blockquote>“EVERY VOICE MATTERS.<br>EVERY STORY HAS VALUE.<br>EVERY PERSON HAS SOMETHING TO TEACH.”</blockquote>
+      <p>We don't believe that only famous people have important stories. Every person's journey can contain a lesson. Every experience can carry knowledge. And every voice has the potential to make a difference.</p>
+    </div>
+
+    <div class="knowledge-universe">
+      <div class="eyebrow">THE HUNK KNOWLEDGE UNIVERSE</div>
+      <h3>FROM ZERO TO DEEP UNDERSTANDING.</h3>
+      <p>As THE HUNK grows, our goal is to develop a dedicated learning space where anyone can explore subjects according to their interests.</p>
+      <div class="learning-cards"><div><b>FILMMAKING</b><span>Beginner → Intermediate → Advanced</span></div><div><b>PHOTOGRAPHY</b><span>Beginner → Intermediate → Advanced</span></div><div><b>AND MORE</b><span>Technology • Science • History • Creativity</span></div></div>
+      <p class="goal"><strong>THE GOAL IS NOT JUST TO GIVE INFORMATION.<br>THE GOAL IS TO HELP PEOPLE UNDERSTAND.</strong></p>
+    </div>
+
+    <div class="about-promise"><div class="eyebrow">OUR PROMISE</div><h3>KNOWLEDGE SHOULD BE UNDERSTANDABLE.<br>STORIES SHOULD BE RESPECTED.<br>VOICES SHOULD HAVE A PLACE TO BE HEARD.</h3></div>
+    <div class="about-welcome"><div class="eyebrow">WELCOME TO THE HUNK</div><h3>A PLACE TO LEARN.<br>A PLACE TO DISCOVER.<br>A PLACE TO CREATE.<br>A PLACE TO BE HEARD.</h3><p>THE HUNK</p><span>MORE THAN A NAME. A PLATFORM WITH A PURPOSE.</span></div>
   </div>
 </section>
 
@@ -199,7 +250,7 @@ footer{padding:45px 0;color:#777;font-size:12px}
 <footer>
   <div class="container footer-inner">
     <div>© 2026 THE HUNK. All rights reserved.</div>
-    <div class="socials"><a href="https://www.youtube.com/@TheHunkOfficial" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.instagram.com/thehunkofficialmedia" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@thehunkofficial" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://www.facebook.com/share/1EN5fAmtQ9/" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+    <div class="socials"><a href="#">YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
   </div>
 </footer>
 
