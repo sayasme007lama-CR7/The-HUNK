@@ -1,264 +1,181 @@
+
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE HUNK — Empowering Silent Voices</title>
-<meta name="description" content="THE HUNK — Stories, voices, courage and inspiration.">
+<meta name="description" content="THE HUNK — Stories, knowledge, creativity and voices that deserve to be heard.">
+<title>THE HUNK — Stories With Purpose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
-
-:root{
-  --bg:#070707; --card:#101010; --text:#f4f1e8; --muted:#a7a39a;
-  --gold:#d6ad55; --line:#262626; --max:1180px;
+:root{--bg:#080808;--panel:#101010;--text:#f3f0e8;--muted:#aaa59c;--line:#292929;--accent:#7b2434;--accent2:#a83b50;--rail:92px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(1160px,calc(100% - 48px));margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 20%,rgba(123,36,52,.12),transparent 35%);z-index:-1}
+.rail{position:fixed;right:0;top:0;height:100vh;width:var(--rail);border-left:1px solid var(--line);background:rgba(7,7,7,.94);backdrop-filter:blur(14px);z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.rail .logo{position:absolute;top:26px;font-weight:800;letter-spacing:-1px;font-size:14px;writing-mode:vertical-rl;transform:rotate(180deg)}
+.rail a,.rail button{width:100%;border:0;background:none;color:#aaa;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:12px 4px;cursor:pointer;transition:.25s}
+.rail a:hover,.rail a.active,.rail button:hover{color:#fff;background:rgba(123,36,52,.35)}
+.social-trigger{border-top:1px solid var(--line)!important;margin-top:12px;padding-top:20px!important}
+main{margin-right:var(--rail)}.page{display:none;min-height:100vh}.page.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.35)),url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2200&q=85") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg))}
+.hero-content{padding:80px 60px 120px}.eyebrow,.kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#bda4a8}.kicker{margin-bottom:22px}
+h1{font-size:clamp(64px,12vw,160px);line-height:.86;letter-spacing:-7px;margin:0 0 28px;font-weight:800}h1 span{color:#fff}
+h2{font-size:clamp(46px,7vw,86px);line-height:.95;letter-spacing:-4px;margin:10px 0 28px}h3{font-size:28px;line-height:1.1;margin:10px 0 16px}
+.hero-copy{max-width:680px;color:#d0cbc2;font-size:19px}.btn{display:inline-block;border:1px solid #555;padding:12px 20px;text-transform:uppercase;font-size:11px;letter-spacing:2px;margin:8px 8px 0 0;transition:.25s}.btn:hover{border-color:#fff;background:#fff;color:#000}.btn.primary{background:var(--accent);border-color:var(--accent)}.btn.primary:hover{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.section{padding:120px 0}.section-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:55px}.lead{color:var(--muted);font-size:17px;max-width:550px}
+.story-feature{display:grid;grid-template-columns:1.4fr .8fr;min-height:500px;border:1px solid var(--line);background:#0d0d0d}.story-main{padding:60px;background:linear-gradient(130deg,rgba(123,36,52,.35),transparent 60%),url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80") center/cover;display:flex;flex-direction:column;justify-content:end}.story-main p{max-width:650px;color:#ddd}.story-side{display:flex;flex-direction:column}.mini{padding:34px;border-bottom:1px solid var(--line);flex:1}.num{color:#9d5360;font-size:12px;letter-spacing:2px}
+.quote{padding:90px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0c0c0c}.quote blockquote{font-family:"Playfair Display",serif;font-size:clamp(32px,5vw,60px);line-height:1.15;max-width:900px;margin:0}.quote cite{display:block;margin-top:25px;color:#9d5360;font-style:normal;letter-spacing:2px}
+.about-hero{padding:120px 0 70px}.about-intro{font-size:23px;max-width:850px;color:#d2cec6}.about-photo{width:100%;height:360px;object-fit:cover;margin:30px 0 60px;filter:brightness(.72)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.about-card{background:var(--bg);padding:45px;min-height:330px}.about-card h3{color:#b33b50}.about-card p{color:#b9b4ac}.manifesto{padding:80px 0;text-align:center;border-top:1px solid var(--line)}.manifesto blockquote{font-family:"Playfair Display",serif;font-size:clamp(30px,5vw,62px);line-height:1.1;margin:25px auto;max-width:900px}.knowledge{padding:70px 0;border-top:1px solid var(--line)}.knowledge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.knowledge-grid div{border:1px solid var(--line);padding:28px}.knowledge-grid b{display:block;letter-spacing:2px;margin-bottom:8px}.knowledge-grid span{color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);padding:38px;min-height:250px;background:#0d0d0d}.card:hover{border-color:#6c3340;transform:translateY(-3px);transition:.25s}.card p{color:var(--muted)}
+.contact-box{border:1px solid var(--line);padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,rgba(123,36,52,.22),transparent)}
+footer{padding:50px 0;border-top:1px solid var(--line);color:#777;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.footer-socials{display:flex;gap:20px}.footer-socials a:hover{color:#fff}
+.drawer{position:fixed;right:0;top:0;width:min(420px,92vw);height:100vh;background:#0b0b0b;z-index:100;transform:translateX(105%);transition:.35s;border-left:1px solid #444;padding:35px;box-shadow:-20px 0 60px rgba(0,0,0,.55)}.drawer.open{transform:none}.drawer h2{font-size:48px;margin-top:80px}.drawer a{display:block;border-top:1px solid var(--line);padding:18px 0;font-size:14px;letter-spacing:2px;text-transform:uppercase}.drawer a:hover{color:#d16b7c}.close{position:absolute;right:25px;top:20px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:90;display:none}.overlay.show{display:block}
+.mobile-nav{display:none}
+@media(max-width:850px){
+:root{--rail:0px}.rail{display:none}main{margin-right:0}.mobile-nav{display:flex;position:fixed;top:0;left:0;right:0;height:68px;z-index:60;background:rgba(7,7,7,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);align-items:center;justify-content:space-between;padding:0 18px}.mobile-nav strong{letter-spacing:1px}.mobile-nav button{background:none;border:1px solid #444;color:#fff;padding:7px 11px}.mobile-menu{position:fixed;top:68px;left:0;right:0;background:#0b0b0b;border-bottom:1px solid var(--line);display:none;z-index:59}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:14px 20px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.container{width:min(100% - 34px,1160px)}.hero-content{padding:120px 10px 100px}.hero{background-position:65% center}h1{letter-spacing:-4px}.section{padding:90px 0}.section-head,.footer-row{display:block}.section-head .lead{margin-top:22px}.story-feature,.about-grid,.cards,.knowledge-grid{grid-template-columns:1fr}.story-main{min-height:430px;padding:35px}.story-side{display:grid;grid-template-columns:1fr 1fr}.mini{min-height:190px}.about-hero{padding-top:110px}.about-photo{height:260px}.contact-box{display:block}.footer-socials{margin-top:20px;flex-wrap:wrap}
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.container{width:min(92%,var(--max));margin:auto}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;background:linear-gradient(#070707ee,transparent);transition:.3s}
-nav.scrolled{background:#070707f2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px}
-.brand-mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:13px}
-.links{display:flex;gap:28px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.links a{opacity:.8;transition:.2s}.links a:hover{color:var(--gold);opacity:1}
-.menu{display:none;background:none;border:1px solid #333;color:white;border-radius:8px;padding:8px 11px}
-
-/* HERO */
-.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:
- radial-gradient(circle at 75% 35%,#8c6b2925,transparent 28%),
- linear-gradient(115deg,#050505 20%,#1110 60%);}
-.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid #d6ad5520;border-radius:50%;right:-170px;top:18%;box-shadow:0 0 0 60px #d6ad5508,0 0 0 120px #d6ad5504}
-.hero-content{position:relative;z-index:2;padding-top:90px}
-.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px}
-h1{font-size:clamp(58px,11vw,145px);line-height:.86;letter-spacing:-7px;font-weight:900;max-width:850px}
-h1 span{color:var(--gold)}
-.hero-copy{max-width:610px;margin:30px 0;color:#c3c0b7;font-size:18px}
-.cta-row{display:flex;gap:13px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid #444;border-radius:5px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
-.btn.primary{background:var(--gold);color:#090909;border-color:var(--gold)}
-.btn:hover{transform:translateY(-2px);transition:.2s}
-.scroll{position:absolute;bottom:28px;left:4%;font-size:10px;letter-spacing:3px;color:#777;writing-mode:vertical-rl}
-
-/* SECTIONS */
-section{padding:105px 0;border-top:1px solid var(--line)}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
-.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;font-weight:800;text-transform:uppercase}
-h2{font-family:"Playfair Display",serif;font-size:clamp(38px,6vw,72px);line-height:1.05}
-.lead{max-width:470px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-
-/* CARDS */
-.card{background:var(--card);border:1px solid var(--line);padding:26px;min-height:250px;position:relative;overflow:hidden}
-.card:before{content:"";position:absolute;inset:auto -30px -70px auto;width:180px;height:180px;border:1px solid #d6ad5518;border-radius:50%}
-.number{font-size:12px;color:var(--gold);font-weight:800}
-.card h3{font-family:"Playfair Display",serif;font-size:28px;margin:55px 0 8px}
-.card p{color:var(--muted);font-size:14px}
-
-/* FEATURE */
-.feature{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-.feature-main{min-height:450px;background:linear-gradient(145deg,#171717,#0b0b0b);border:1px solid var(--line);padding:42px;display:flex;flex-direction:column;justify-content:end}
-.feature-main h3{font-size:clamp(35px,5vw,65px);line-height:1;margin:12px 0}
-.feature-side{display:grid;gap:18px}
-.mini{background:#101010;border:1px solid var(--line);padding:28px}
-.mini h4{font-size:22px;margin:12px 0 5px}
-.mini p{color:var(--muted);font-size:13px}
-
-/* QUOTE */
-.quote{padding:90px 0;text-align:center;background:#0a0a0a}
-.quote blockquote{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,58px);max-width:900px;margin:auto;line-height:1.15}
-.quote cite{display:block;color:var(--gold);font-size:11px;letter-spacing:3px;margin-top:25px;font-style:normal}
-
-/* ABOUT / CONTACT */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.about p{color:#b8b5ad;margin-top:20px;font-size:17px}
-.manifesto{border-left:2px solid var(--gold);padding-left:25px}
-.contact-box{border:1px solid var(--line);padding:35px;display:flex;justify-content:space-between;align-items:center;gap:30px}
-
-/* FOOTER */
-footer{padding:45px 0;color:#777;font-size:12px}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:25px}
-.socials{display:flex;gap:18px}.socials a:hover{color:var(--gold)}
-
-@media(max-width:800px){
- .links{display:none;position:absolute;top:72px;left:4%;right:4%;padding:20px;background:#0b0b0bf7;border:1px solid var(--line);flex-direction:column;gap:18px}
- .links.open{display:flex}.menu{display:block}
- h1{letter-spacing:-4px}
- .grid,.feature,.about{grid-template-columns:1fr}
- .section-head{display:block}.lead{margin-top:18px}
- .feature-main{min-height:380px}.about{gap:40px}
- .contact-box{display:block}.contact-box .btn{margin-top:20px}
- .footer-inner{display:block}.socials{margin-top:15px}
-}
-
-/* PREMIUM ABOUT PAGE */
-.about-page{padding:110px 0 80px;background:#f4f0e8;color:#171515}
-.about-page .container{max-width:1100px}
-.about-hero{padding:20px 0 85px;border-bottom:1px solid #cfc6b7}
-.about-page .eyebrow{color:#641f2b;letter-spacing:4px;font-weight:800;font-size:11px}
-.about-hero h2{font-family:"Playfair Display",serif;font-size:clamp(42px,7vw,82px);line-height:.98;margin:20px 0 28px;letter-spacing:-2px}
-.about-hero h2 span,.about-section h3,.about-promise h3{color:#641f2b}
-.about-intro{font-size:20px;line-height:1.65;max-width:760px;color:#514c46}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#cfc6b7;margin:65px 0;background-color:#cfc6b7}
-.about-section{background:#f4f0e8;padding:42px 38px;min-height:330px}
-.about-num{font-size:11px;font-weight:800;color:#9b7b37;letter-spacing:2px;margin-bottom:50px}
-.about-section h3{font-family:"Playfair Display",serif;font-size:30px;margin-bottom:18px;letter-spacing:.5px}
-.about-section p{color:#514c46;margin:0 0 14px;font-size:15px;line-height:1.8}
-.about-section strong{color:#641f2b}
-.about-topics{font-size:14px!important;font-weight:700;color:#641f2b!important}
-.vision-line{font-family:"Playfair Display",serif;font-size:21px!important;line-height:1.35!important;color:#641f2b!important}
-.pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.pillars span{border:1px solid #9b7b37;padding:7px 12px;font-size:10px;letter-spacing:1.5px;font-weight:800;color:#641f2b}
-.about-manifesto{background:#171515;color:#f4f0e8;padding:75px 55px;margin:65px 0;text-align:center}.about-manifesto .eyebrow{color:#d6ad55}.about-manifesto blockquote{font-family:"Playfair Display",serif;font-size:clamp(28px,5vw,55px);line-height:1.1;margin:25px auto;max-width:900px}.about-manifesto p{max-width:720px;margin:auto;color:#c7c1b7;line-height:1.8}
-.knowledge-universe{padding:25px 0 70px}.knowledge-universe h3{font-family:"Playfair Display",serif;color:#641f2b;font-size:clamp(32px,5vw,58px);margin:15px 0}.knowledge-universe>p{max-width:760px;color:#514c46;line-height:1.8}.learning-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:35px 0}.learning-cards div{border:1px solid #cfc6b7;padding:25px;background:#eee9df}.learning-cards b{display:block;color:#641f2b;font-family:"Playfair Display",serif;font-size:22px;margin-bottom:8px}.learning-cards span{font-size:12px;color:#69635b}.goal{margin-top:30px!important;color:#641f2b!important;font-family:"Playfair Display",serif;font-size:20px}.about-promise{border-top:1px solid #cfc6b7;border-bottom:1px solid #cfc6b7;padding:65px 0}.about-promise h3{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,50px);line-height:1.15;margin-top:20px}.about-welcome{text-align:center;padding:90px 0 30px}.about-welcome h3{font-family:"Playfair Display",serif;color:#641f2b;font-size:clamp(32px,5vw,62px);line-height:1.05;margin:20px 0}.about-welcome p{font-weight:900;letter-spacing:5px;margin-top:40px}.about-welcome span{font-size:11px;color:#9b7b37;letter-spacing:2px;font-weight:800}
-@media(max-width:800px){.about-grid{grid-template-columns:1fr}.about-section{padding:35px 25px;min-height:auto}.about-manifesto{padding:55px 25px}.learning-cards{grid-template-columns:1fr}.about-hero{padding-bottom:55px}}
-
-.about-photo{width:100%;height:250px;object-fit:cover;display:block;filter:saturate(.88) contrast(1.03)}
-.about-section{padding:0 0 34px;overflow:hidden}
-.about-section .about-copy{padding:30px 34px 0}
-.about-hero-photo{width:100%;height:min(58vw,520px);object-fit:cover;display:block;margin-top:38px;filter:brightness(.78) saturate(.85)}
-.about-hero-photo-wrap{position:relative;overflow:hidden;background:#171515}
-.about-hero-photo-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(23,21,21,.72) 100%)}
-.about-hero-photo-label{position:absolute;left:30px;bottom:25px;z-index:2;color:#f4f0e8;font-size:11px;letter-spacing:3px;font-weight:800}
-@media(max-width:800px){.about-photo{height:230px}.about-section .about-copy{padding:28px 25px 0}.about-hero-photo{height:300px}}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#home"><span class="brand-mark">TH</span><span>THE HUNK</span></a>
-    <div class="links" id="links">
-      <a href="#home">Home</a><a href="#stories">Stories</a><a href="#about">About</a>
-      <a href="#mission">Mission</a><a href="#contact">Contact</a>
-    </div>
-    <button class="menu" id="menu">☰</button>
-  </div>
+<nav class="rail" aria-label="Main navigation">
+  <div class="logo">TH</div>
+  <a href="#home" data-page="home">Home</a>
+  <a href="#stories" data-page="stories">Stories</a>
+  <a href="#about" data-page="about">About</a>
+  <a href="#mission" data-page="mission">Mission</a>
+  <a href="#contact" data-page="contact">Contact</a>
+  <button class="social-trigger" id="socialBtn">Social ↗</button>
 </nav>
 
-<main>
-<section class="hero" id="home">
-  <div class="container hero-content">
-    <div class="kicker">A story can change a life.</div>
-    <h1>THE <span>HUNK</span></h1>
-    <p class="hero-copy">Stories that deserve to be heard. Voices that deserve to rise. A cinematic home for courage, truth, talent and the people behind the stories.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#stories">Explore Stories</a>
-      <a class="btn" href="#about">Our Mission →</a>
-    </div>
-  </div>
-  <div class="scroll">SCROLL TO DISCOVER</div>
-</section>
-
-<section id="stories">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">01 — Stories</div><h2>Real people.<br>Real stories.</h2></div>
-      <p class="lead">From unheard voices to extraordinary journeys, THE HUNK brings human stories into the light.</p>
-    </div>
-    <div class="feature">
-      <article class="feature-main">
-        <div class="eyebrow">Featured Story</div>
-        <h3>The courage to begin again.</h3>
-        <p class="lead">A cinematic space for your first flagship story, documentary or interview.</p>
-        <div class="cta-row" style="margin-top:22px"><a class="btn primary" href="#contact">Watch / Read</a></div>
-      </article>
-      <div class="feature-side">
-        <article class="mini"><span class="number">01</span><h4>Voices</h4><p>Stories from people whose voices are often overlooked.</p></article>
-        <article class="mini"><span class="number">02</span><h4>Journeys</h4><p>Failures, turning points, dreams and the road forward.</p></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="quote">
-  <div class="container">
-    <blockquote>“Every voice matters. Some just need someone brave enough to listen.”</blockquote>
-    <cite>— THE HUNK</cite>
-  </div>
+<nav class="mobile-nav">
+  <strong>THE HUNK</strong>
+  <button id="mobileToggle">MENU</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-page="home">Home</a><a href="#stories" data-page="stories">Stories</a><a href="#about" data-page="about">About</a><a href="#mission" data-page="mission">Mission</a><a href="#contact" data-page="contact">Contact</a><a href="#" id="mobileSocial">Social ↗</a>
 </div>
 
-<section id="mission">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">02 — What We Do</div><h2>Create.<br>Explore.<br>Inspire.</h2></div>
-      <p class="lead">Built as a media and storytelling platform — ready for films, interviews, photography, articles and original productions.</p>
-    </div>
-    <div class="grid">
-      <article class="card"><span class="number">01</span><h3>Documentaries</h3><p>Human-centered cinematic films and powerful real-world narratives.</p></article>
-      <article class="card"><span class="number">02</span><h3>Interviews</h3><p>Conversations that go beyond the surface and reveal the person behind the story.</p></article>
-      <article class="card"><span class="number">03</span><h3>Inspiration</h3><p>Ideas, journeys and lessons designed to move people forward.</p></article>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <button class="close" id="closeDrawer">×</button>
+  <div class="eyebrow">THE HUNK</div>
+  <h2>Follow<br>the story.</h2>
+  <p class="lead">Connect with THE HUNK across our social platforms.</p>
+  <a href="https://www.youtube.com/@TheHunkOfficial" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+  <a href="https://www.instagram.com/thehunkofficialmedia" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+  <a href="https://www.tiktok.com/@thehunkofficial" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+  <a href="https://www.facebook.com/share/1EN5fAmtQ9/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+</aside>
+
+<main>
+
+<section class="page active" id="home">
+  <div class="hero">
+    <div class="container hero-content">
+      <div class="kicker">A story can change a life.</div>
+      <h1>THE<br>HUNK</h1>
+      <p class="hero-copy">Stories that deserve to be heard. Voices that deserve to rise. A cinematic home for courage, truth, talent, knowledge and the people behind the stories.</p>
+      <div><a class="btn primary" href="#stories" data-page="stories">Explore Stories</a><a class="btn" href="#about" data-page="about">About THE HUNK →</a></div>
     </div>
   </div>
+  <div class="quote"><div class="container"><blockquote>“Every voice matters. Some just need someone brave enough to listen.”</blockquote><cite>— THE HUNK</cite></div></div>
 </section>
 
-<section id="about" class="about-page">
+<section class="page" id="stories">
+  <div class="container section">
+    <div class="section-head"><div><div class="eyebrow">01 — Stories</div><h2>Real people.<br>Real stories.</h2></div><p class="lead">From unheard voices to extraordinary journeys, THE HUNK brings human stories into the light.</p></div>
+    <div class="story-feature">
+      <article class="story-main"><div class="eyebrow">Featured Story</div><h3>The courage to begin again.</h3><p>A cinematic space for the stories that are too meaningful to remain unheard. This is where THE HUNK will publish flagship documentaries, interviews and human journeys.</p><a class="btn primary" href="#contact" data-page="contact">Share a Story →</a></article>
+      <div class="story-side"><article class="mini"><span class="num">01</span><h3>Voices</h3><p class="lead">Stories from people whose voices are often overlooked.</p></article><article class="mini"><span class="num">02</span><h3>Journeys</h3><p class="lead">Failures, turning points, dreams and the road forward.</p></article></div>
+    </div>
+  </div>
+  <div class="quote"><div class="container"><blockquote>One person's story can become another person's strength.</blockquote></div></div>
+</section>
+
+<section class="page" id="about">
   <div class="container">
     <div class="about-hero">
-      <div class="eyebrow">03 — ABOUT THE HUNK</div>
+      <div class="eyebrow">02 — About THE HUNK</div>
       <h2>MORE THAN A NAME.<br><span>A PLATFORM WITH A PURPOSE.</span></h2>
       <p class="about-intro">THE HUNK is a platform created to discover, share, learn, and amplify meaningful stories, knowledge, ideas, and voices.</p>
-      <div class="about-hero-photo-wrap"><img class="about-hero-photo" src="https://images.unsplash.com/photo-1759659334772-c3a05b8178e9?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Documentary interview and storytelling" loading="eager"><div class="about-hero-photo-label">STORIES • PEOPLE • KNOWLEDGE • PURPOSE</div></div>
+      <img class="about-photo" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1800&q=85" alt="Cinematic filmmaking and storytelling">
     </div>
-
     <div class="about-grid">
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1759659334772-c3a05b8178e9?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="A documentary interview capturing a real human story" loading="lazy"><div class="about-copy"><div class="about-num">01</div><h3>WHY THE HUNK EXISTS</h3><p>The world is full of people with extraordinary stories, hidden talents, valuable experiences, and knowledge. But not every voice gets heard.</p><p>Some stories remain untold. Some people remain unseen. Some knowledge never reaches the people who need it.</p><p><strong>THE HUNK exists to help change that.</strong></p></div></article>
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1760720963053-aca574b081b8?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Knowledge, learning and reflection" loading="lazy"><div class="about-copy"><div class="about-num">02</div><h3>STORIES</h3><p>We explore stories of struggle, courage, achievement, failure, hope, and transformation.</p><p>We believe that a powerful story does not have to come from a famous person. Sometimes, the most meaningful stories belong to ordinary people who have experienced extraordinary things.</p><p><strong>One person's story can become another person's strength.</strong></p></div></article>
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1768885511762-4f8a888b0a6f?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Filmmaking and visual storytelling" loading="lazy"><div class="about-copy"><div class="about-num">03</div><h3>LEARN</h3><p>THE HUNK aims to become a place where people can explore and understand different subjects—from the simplest concepts to deeper knowledge.</p><p class="about-topics">Technology • Science • History • Psychology • Filmmaking • Photography • Languages • Creativity • Personal Development</p><p><strong>Learn something today that makes you better tomorrow.</strong></p></div></article>
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1546838768-4f581246d098?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Photography and creative expression" loading="lazy"><div class="about-copy"><div class="about-num">04</div><h3>CREATE</h3><p>THE HUNK explores filmmaking, photography, visual storytelling, interviews, documentaries, and other forms of creative expression.</p><p>Creativity is not only about making something beautiful. It is about giving an idea, a story, or a voice a way to reach people.</p></div></article>
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1739296385046-206bd6f31dc1?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="The craft behind the camera" loading="lazy"><div class="about-copy"><div class="about-num">05</div><h3>INSPIRE</h3><p>We want to share stories, ideas, and experiences that encourage people to believe in themselves and continue moving forward.</p><p>Not perfect lives. Not impossible dreams. But real people who faced real challenges—and continued to rise.</p></div></article>
-      <article class="about-section"><img class="about-photo" src="https://images.unsplash.com/photo-1768885511762-4f8a888b0a6f?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Creating stories that move people" loading="lazy"><div class="about-copy"><div class="about-num">06</div><h3>OUR VISION</h3><p class="vision-line">TO AMPLIFY UNHEARD VOICES, SHARE MEANINGFUL KNOWLEDGE, AND INSPIRE PEOPLE TO RISE.</p><div class="pillars"><span>DISCOVER</span><span>LEARN</span><span>CREATE</span><span>SHARE</span><span>INSPIRE</span></div></div></article>
+      <article class="about-card"><div class="num">01</div><h3>WHY THE HUNK EXISTS</h3><p>The world is full of people with extraordinary stories, hidden talents, valuable experiences, and knowledge. But not every voice gets heard.</p><p>Some stories remain untold. Some people remain unseen. Some knowledge never reaches the people who need it.</p><p><strong>THE HUNK exists to help change that.</strong></p></article>
+      <article class="about-card"><div class="num">02</div><h3>STORIES</h3><p>We explore stories of struggle, courage, achievement, failure, hope, and transformation.</p><p>We believe that a powerful story does not have to come from a famous person. Sometimes, the most meaningful stories belong to ordinary people who have experienced extraordinary things.</p><p><strong>One person's story can become another person's strength.</strong></p></article>
+      <article class="about-card"><div class="num">03</div><h3>LEARN</h3><p>THE HUNK aims to become a place where people can explore and understand different subjects—from the simplest concepts to deeper knowledge.</p><p>Technology • Science • History • Psychology • Filmmaking • Photography • Languages • Creativity • Personal Development</p><p><strong>Learn something today that makes you better tomorrow.</strong></p></article>
+      <article class="about-card"><div class="num">04</div><h3>CREATE</h3><p>THE HUNK explores filmmaking, photography, visual storytelling, interviews, documentaries, and other forms of creative expression.</p><p>Creativity is not only about making something beautiful. It is about giving an idea, a story, or a voice a way to reach people.</p></article>
+      <article class="about-card"><div class="num">05</div><h3>INSPIRE</h3><p>We want to share stories, ideas, and experiences that encourage people to believe in themselves and continue moving forward.</p><p>Not perfect lives. Not impossible dreams. But real people who faced real challenges—and continued to rise.</p></article>
+      <article class="about-card"><div class="num">06</div><h3>OUR VISION</h3><p><strong>TO AMPLIFY UNHEARD VOICES, SHARE MEANINGFUL KNOWLEDGE, AND INSPIRE PEOPLE TO RISE.</strong></p><p>Discover • Learn • Create • Share • Inspire</p></article>
     </div>
-
-    <div class="about-manifesto">
-      <div class="eyebrow">OUR PHILOSOPHY</div>
-      <blockquote>“EVERY VOICE MATTERS.<br>EVERY STORY HAS VALUE.<br>EVERY PERSON HAS SOMETHING TO TEACH.”</blockquote>
-      <p>We don't believe that only famous people have important stories. Every person's journey can contain a lesson. Every experience can carry knowledge. And every voice has the potential to make a difference.</p>
-    </div>
-
-    <div class="knowledge-universe">
-      <div class="eyebrow">THE HUNK KNOWLEDGE UNIVERSE</div>
-      <h3>FROM ZERO TO DEEP UNDERSTANDING.</h3>
-      <p>As THE HUNK grows, our goal is to develop a dedicated learning space where anyone can explore subjects according to their interests.</p>
-      <div class="learning-cards"><div><b>FILMMAKING</b><span>Beginner → Intermediate → Advanced</span></div><div><b>PHOTOGRAPHY</b><span>Beginner → Intermediate → Advanced</span></div><div><b>AND MORE</b><span>Technology • Science • History • Creativity</span></div></div>
-      <p class="goal"><strong>THE GOAL IS NOT JUST TO GIVE INFORMATION.<br>THE GOAL IS TO HELP PEOPLE UNDERSTAND.</strong></p>
-    </div>
-
-    <div class="about-promise"><div class="eyebrow">OUR PROMISE</div><h3>KNOWLEDGE SHOULD BE UNDERSTANDABLE.<br>STORIES SHOULD BE RESPECTED.<br>VOICES SHOULD HAVE A PLACE TO BE HEARD.</h3></div>
-    <div class="about-welcome"><div class="eyebrow">WELCOME TO THE HUNK</div><h3>A PLACE TO LEARN.<br>A PLACE TO DISCOVER.<br>A PLACE TO CREATE.<br>A PLACE TO BE HEARD.</h3><p>THE HUNK</p><span>MORE THAN A NAME. A PLATFORM WITH A PURPOSE.</span></div>
+    <div class="manifesto"><div class="eyebrow">OUR PHILOSOPHY</div><blockquote>“EVERY VOICE MATTERS.<br>EVERY STORY HAS VALUE.<br>EVERY PERSON HAS SOMETHING TO TEACH.”</blockquote><p class="lead" style="margin:auto">We don't believe that only famous people have important stories. Every person's journey can contain a lesson. Every experience can carry knowledge. And every voice has the potential to make a difference.</p></div>
+    <div class="knowledge"><div class="eyebrow">THE HUNK KNOWLEDGE UNIVERSE</div><h2 style="font-size:55px">FROM ZERO TO DEEP UNDERSTANDING.</h2><p class="lead">As THE HUNK grows, our goal is to develop a dedicated learning space where anyone can explore subjects according to their interests.</p><div class="knowledge-grid"><div><b>FILMMAKING</b><span>Beginner → Intermediate → Advanced</span></div><div><b>PHOTOGRAPHY</b><span>Beginner → Intermediate → Advanced</span></div><div><b>AND MORE</b><span>Technology • Science • History • Creativity</span></div></div><p style="margin-top:35px"><strong>THE GOAL IS NOT JUST TO GIVE INFORMATION.<br>THE GOAL IS TO HELP PEOPLE UNDERSTAND.</strong></p></div>
+    <div class="manifesto"><div class="eyebrow">OUR PROMISE</div><h3>KNOWLEDGE SHOULD BE UNDERSTANDABLE.<br>STORIES SHOULD BE RESPECTED.<br>VOICES SHOULD HAVE A PLACE TO BE HEARD.</h3></div>
+    <div class="manifesto"><div class="eyebrow">WELCOME TO THE HUNK</div><h2 style="font-size:50px">A PLACE TO LEARN.<br>A PLACE TO DISCOVER.<br>A PLACE TO CREATE.<br>A PLACE TO BE HEARD.</h2><p class="lead" style="margin:auto">THE HUNK — MORE THAN A NAME. A PLATFORM WITH A PURPOSE.</p></div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">04 — Contact</div><h2>Have a story?</h2></div>
-      <p class="lead">Collaborations, interviews, documentaries, creative projects and story submissions.</p>
-    </div>
-    <div class="contact-box">
-      <div><h3 style="font-size:28px">Let's make something meaningful.</h3><p style="color:var(--muted)">THE HUNK • Stories worth hearing.</p></div>
-      <a class="btn primary" href="mailto:hello@thehunk.com">Get In Touch →</a>
-    </div>
+<section class="page" id="mission">
+  <div class="container section">
+    <div class="section-head"><div><div class="eyebrow">03 — What We Do</div><h2>Create.<br>Explore.<br>Inspire.</h2></div><p class="lead">Built as a media and storytelling platform — ready for films, interviews, photography, articles and original productions.</p></div>
+    <div class="cards"><article class="card"><span class="num">01</span><h3>Documentaries</h3><p>Human-centered cinematic films and powerful real-world narratives.</p></article><article class="card"><span class="num">02</span><h3>Interviews</h3><p>Conversations that go beyond the surface and reveal the person behind the story.</p></article><article class="card"><span class="num">03</span><h3>Inspiration</h3><p>Ideas, journeys and lessons designed to move people forward.</p></article></div>
   </div>
 </section>
+
+<section class="page" id="contact">
+  <div class="container section">
+    <div class="section-head"><div><div class="eyebrow">04 — Contact</div><h2>Have a story?</h2></div><p class="lead">Collaborations, interviews, documentaries, creative projects and story submissions.</p></div>
+    <div class="contact-box"><div><h3>Let's make something meaningful.</h3><p class="lead">THE HUNK • Stories worth hearing.</p></div><a class="btn primary" href="mailto:hello@thehunk.com">Get In Touch →</a></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <div>© 2026 THE HUNK. All rights reserved.</div>
-    <div class="socials"><a href="#">YouTube</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
-  </div>
+  <div class="container footer-row"><div>© 2026 THE HUNK. All rights reserved.</div><div class="footer-socials"><a href="https://www.youtube.com/@TheHunkOfficial" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.instagram.com/thehunkofficialmedia" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@thehunkofficial" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://www.facebook.com/share/1EN5fAmtQ9/" target="_blank" rel="noopener noreferrer">Facebook</a></div></div>
 </footer>
 
 <script>
-const nav=document.getElementById('nav'), menu=document.getElementById('menu'), links=document.getElementById('links');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
-menu.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const pages=[...document.querySelectorAll('.page')];
+const navLinks=[...document.querySelectorAll('[data-page]')];
+const mobileMenu=document.getElementById('mobileMenu');
+const drawer=document.getElementById('drawer');
+const overlay=document.getElementById('overlay');
+
+function showPage(name, updateHash=true){
+  const target=document.getElementById(name)||document.getElementById('home');
+  pages.forEach(p=>p.classList.remove('active'));
+  target.classList.add('active');
+  navLinks.forEach(a=>a.classList.toggle('active',a.dataset.page===target.id));
+  if(updateHash) history.pushState(null,'','#'+target.id);
+  mobileMenu.classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function route(){
+  const name=location.hash.replace('#','')||'home';
+  showPage(name,false);
+}
+navLinks.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showPage(a.dataset.page)}));
+window.addEventListener('popstate',route);
+window.addEventListener('hashchange',route);
+
+function openDrawer(){drawer.classList.add('open');overlay.classList.add('show')}
+function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('show')}
+document.getElementById('socialBtn').addEventListener('click',openDrawer);
+document.getElementById('mobileSocial').addEventListener('click',e=>{e.preventDefault();mobileMenu.classList.remove('open');openDrawer()});
+document.getElementById('closeDrawer').addEventListener('click',closeDrawer);
+overlay.addEventListener('click',closeDrawer);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+document.getElementById('mobileToggle').addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+route();
 </script>
 </body>
 </html>
